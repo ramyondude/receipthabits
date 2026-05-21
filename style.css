@@ -1,0 +1,268 @@
+:root {
+  --bg-main: #0B0F19;
+  --bg-panel: #161F30;
+  --text-main: #F3F4F6;
+  --text-muted: #9CA3AF;
+  --accent: #10B981; 
+  --accent-premium: #8B5CF6; 
+  --border-color: #24324D;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.app-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.app-header h1 span {
+  color: var(--accent);
+}
+
+.app-header p {
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.panel {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 30px;
+}
+
+.panel h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.input-with-symbol {
+  position: relative;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.input-with-symbol input {
+  padding-left: 32px;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 12px;
+  accent-color: var(--accent);
+}
+
+.segmented-control {
+  display: flex;
+  background-color: var(--bg-main);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.segmented-control input[type="radio"] {
+  display: none;
+}
+
+.segmented-control label {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.segmented-control input[type="radio"]:checked + label {
+  background-color: var(--accent);
+  color: #000;
+  font-weight: 600;
+}
+
+.odometer-container {
+  background-color: var(--bg-main);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.main-stat .stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.main-stat .stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.sub-stat {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.item-icon {
+  font-size: 1.75rem;
+  margin-right: 12px;
+}
+
+.item-count {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.item-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.insight-box {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--accent);
+  padding: 14px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  margin: 24px 0;
+  line-height: 1.4;
+}
+
+.action-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: var(--accent-premium);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #1F2937;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .panel {
+    padding: 20px;
+  }
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+}
